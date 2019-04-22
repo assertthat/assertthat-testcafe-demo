@@ -1,0 +1,15 @@
+{
+  "name": "testcafe-cucumber-demo",
+  "version": "0.0.1",
+  "description": "An example integration of TestCafe into CucumberJS",
+  "author": "helen-dikareva",
+  "scripts": {
+    "pretest": "call ./scripts/features.cmd",
+    "test": "./node_modules/.bin/cucumber-js.cmd -f json:reports/cucumber_report.json",
+    "posttest": "call ./scripts/report.cmd"
+  },
+  "dependencies": {
+    "cucumber": "5.1.0",
+    "testcafe": "1.1.3"
+  }
+}
