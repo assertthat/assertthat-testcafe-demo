@@ -13,7 +13,7 @@ var Role           = require('testcafe').Role;
     });
 
     When('I am typing my search request {string} on GitHub', function (text) {
-        var input = Selector('input.form-control.header-search-input.js-site-search-focus').with({ boundTestRun: testController });
+        var input = Selector("input[name='q']").with({ boundTestRun: testController });
 
         return testController.typeText(input, text);
     });
@@ -23,7 +23,7 @@ var Role           = require('testcafe').Role;
     });
 
     Then('I should see that the first GitHub\'s result is {string}', function (text) {
-        var firstLink = Selector('#js-pjax-container > div > div.col-12.col-md-9.float-left.px-2.pt-3.pt-md-0.codesearch-results > div > ul > li:nth-child(1) > div.col-12.col-md-8.pr-md-3 > h3 > a').with({ boundTestRun: testController });
+        var firstLink = Selector('.codesearch-results h3 a', { index:0 }).with({ boundTestRun: testController });
 
         return testController.expect(firstLink.innerText).contains(text);
     });
