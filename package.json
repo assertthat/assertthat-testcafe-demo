@@ -4,11 +4,12 @@
   "description": "An example integration of TestCafe into CucumberJS",
   "author": "AssertThat",
   "scripts": {
-    "pretest": "call ./scripts/features.cmd",
+    "pretest": "./node_modules/.bin/assertthat-bdd.cmd -i 10005 -f",
     "test": "./node_modules/.bin/cucumber-js.cmd -f json:reports/cucumber_report.json",
-    "posttest": "call ./scripts/report.cmd"
+    "posttest": "./node_modules/.bin/assertthat-bdd.cmd -i 10005 -r"
   },
   "dependencies": {
+    "@assertthat/assertthat-bdd": "^1.0.0",
     "cucumber": "5.1.0",
     "testcafe": "1.1.3"
   }
