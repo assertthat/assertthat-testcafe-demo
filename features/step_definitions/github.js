@@ -3,7 +3,7 @@ var Selector       = require('testcafe').Selector;
 var Role           = require('testcafe').Role;
 
     var testController = null;
-    Given('I am open GitHub page',{timeout: 60 * 1000}, function () {
+    Given('I am opening GitHub page',{timeout: 60 * 1000}, function () {
         return this.waitForTestController()
             .then(function (tc) {
                 testController = tc;
