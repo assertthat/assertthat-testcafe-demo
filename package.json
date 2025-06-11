@@ -9,7 +9,7 @@
     "posttest": "./node_modules/.bin/assertthat-bdd.cmd -i 10005 -r"
   },
   "dependencies": {
-    "@assertthat/assertthat-bdd": "^1.0.0",
+    "@assertthat/assertthat-bdd": "^2.0.1",
     "cucumber": "5.1.0",
     "testcafe": "3.7.2"
   }
