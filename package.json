@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@assertthat/assertthat-bdd": "^2.0.1",
-    "cucumber": "5.1.0",
+    "cucumber": "6.0.7",
     "testcafe": "3.7.2"
   }
 }
